@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c673scbx5q4cr"]
+
+[ext_resource type="Texture2D" uid="uid://bl8i8nbcv50qj" path="res://imagenes/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0001_8.png" id="1_vbofa"]
+[ext_resource type="Texture2D" uid="uid://biosba2qjbcs3" path="res://imagenes/Free Pixel Art Forest/Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png" id="2_pwegc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayj11"]
+size = Vector2(2322, 72)
+
+[node name="suelo" type="StaticBody2D"]
+
+[node name="SUELO 1" type="Sprite2D" parent="."]
+position = Vector2(-8, -464)
+scale = Vector2(2.49138, 1.40227)
+texture = ExtResource("1_vbofa")
+centered = false
+
+[node name="SUELO 2" type="Sprite2D" parent="."]
+position = Vector2(0, -320)
+scale = Vector2(2.48276, 1.22068)
+texture = ExtResource("2_pwegc")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1151, 612)
+shape = SubResource("RectangleShape2D_ayj11")
