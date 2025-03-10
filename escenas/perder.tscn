@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3mvi0c3g3ova"]
+
+[ext_resource type="Script" path="res://Scripts/perder.gd" id="1_dwok6"]
+[ext_resource type="Texture2D" uid="uid://c5ato887yn43" path="res://imagenes/mgsus.png" id="2_0e7pe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3n7l"]
+bg_color = Color(0.985192, 0.326275, 0.500276, 0.776471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlh5i"]
+bg_color = Color(0.00392157, 0.00392157, 0.00392157, 0.956863)
+
+[node name="Perder" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dwok6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.325441, 0.325441, 0.325441, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0e7pe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 452.0
+offset_top = 128.0
+offset_right = -475.0
+offset_bottom = -171.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IRALMENU" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_d3n7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xlh5i")
+text = "MENÚ"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 165.0
+offset_right = 1039.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 30
+text = "¡¿YA TE RENDISTE?!
+DECEPCIONANTE"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 432.0
+offset_right = 887.0
+offset_bottom = 659.0
+theme_override_colors/font_color = Color(0.745098, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "¡ME ESPERABA MÁS DE TÍ!"
