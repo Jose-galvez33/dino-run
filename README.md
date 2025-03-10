@@ -1,2 +1,0 @@
-# dino-run
-dinosaurio google
