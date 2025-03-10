@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://8vv0230h2beh"]
+
+[ext_resource type="Script" path="res://Scripts/opciones.gd" id="1_klc1c"]
+[ext_resource type="Texture2D" uid="uid://fv5u8cfk0ibp" path="res://imagenes/CABRA 2.png" id="2_y2nyo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2c2ft"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_klc1c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.256139, 0.371775, 0.728156, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1702.0
+offset_top = -451.0
+offset_right = 663.0
+offset_bottom = 874.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4851, 0.484833)
+pivot_offset = Vector2(2190, 250.338)
+texture = ExtResource("2_y2nyo")
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -145.5
+offset_right = 129.5
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="salir" type="Button" parent="ColorRect/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_2c2ft")
+text = "Salir"
+
+[connection signal="button_up" from="ColorRect/TextureRect/VBoxContainer/salir" to="." method="_on_salir_button_up"]
+[connection signal="pressed" from="ColorRect/TextureRect/VBoxContainer/salir" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/VBoxContainer/salir" to="." method="_on_salir_pressed"]
